@@ -1,0 +1,280 @@
+*{
+
+    box-sizing: border-box;
+    margin:0; 
+    padding:0; 
+}
+
+
+body{
+    position:relative;
+    overflow-x: hidden;
+    width:100vw;
+    font-family: 'Public Sans', sans-serif;
+}
+
+
+
+li,a, button{
+    font-family: 'Public Sans', sans-serif;
+    font-weight:300; 
+    font-size: 20px; 
+    color: black;
+    text-decoration: none;
+}
+
+header{
+   background-color: white;
+   display:flex;
+   justify-content: space-between;
+   align-items: center;
+   padding:30px 10%;
+   z-index: 2;
+   width:100vw;
+
+}
+
+.logo{
+    cursor:pointer;
+}
+
+.nav_links{
+    list-style: none;
+}
+
+.nav_links li{
+    display:inline-block;
+    padding:0px 20px; 
+}
+
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+    position: relative;
+    margin-left:20px;
+    color: grey; 
+}
+
+.nav_links li a::after{
+    content:"";
+    position: absolute;
+    left: 50px; 
+    transform: translate(-50%);
+    bottom:-35px;
+    width:0; 
+    height: 4px; 
+    background: grey; 
+    transition: all .5s;
+}
+
+.nav_links li a:hover{
+    color: lightgreen;
+}
+
+.dropdown-toggle{
+    display: none; 
+    outline: none;
+    border: none;
+    background:transparent;
+    cursor: pointer;
+}
+
+span,p { 
+    color: grey
+}
+
+.details{
+    background-color: lightgray;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow-x:hidden; 
+}
+
+.breif_details{
+    display:flex;
+    flex-direction: column;
+    width: 70%;
+    transform: translate(40%, -40%);
+}
+
+button{
+    padding:9px 25px; 
+    outline: none; 
+    background-image: linear-gradient(to right, #42f587, #42e9f5 100%);
+    border:none;
+    border-radius: 50px; 
+    cursor:pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover{
+    color:white;
+}
+
+.breif_details h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.mockup{
+    background-image: url('/images/bg-intro-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 50px;
+    background-position-y: -80px;
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+.mockup-img{
+    width: 80%; 
+    transform: translate(135px, -45px);
+}
+
+.reason{
+    background-color:white;
+    padding: 100px 50px;
+}
+
+.benefit{
+   position: relative;
+   padding-bottom: 20px;
+   width: 40vw; 
+}
+
+.benefit h1{
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+.benefit p{
+    color: grey;
+    font-size: 18px; 
+}
+
+.reason .why_list{
+    display : flex; 
+    justify-content: space-between;
+    gap: 1.5em;
+}
+
+.why_list > div img{
+    padding:10px 0;
+}
+
+.why_list > div h2{
+    padding: 20px 0;
+}
+
+.latest_article{
+    padding: 100px 50px; 
+    background-color: lightgray;
+}
+.latest_article h1 {
+    font-size: 40px;
+    margin-bottom: 30px; 
+}
+
+.article{
+    display:flex; 
+    justify-content: space-between;
+    gap: 1.3em;
+}
+
+.article .article_card{ 
+    overflow:hidden; 
+    
+}
+
+.article_thumbnail{
+    width:100%;
+    width: 200px;
+    padding-bottom: 20px;
+}
+
+.article_card .postedby{
+    margin: 10px 0; 
+}
+
+.article_card .article_body{
+    font-size: 20px;
+    padding: 10px 0; 
+}
+
+.card_body{
+    padding:20px;
+}
+
+footer{
+    background-color: #333366;
+    display: flex; 
+    justify-content: space-between;
+    padding: 10px 50px;
+}
+
+.ft_nav_1{
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 50%;
+}
+
+footer ul{
+    list-style: none;
+}
+
+
+.social_link{
+    display:flex; 
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.social_link.logo_img{
+    color: black;
+    padding-bottom: 0px;
+}
+
+.social_link_list li{
+    display:inline-block;
+    margin-right:10px;
+    padding: 10px;
+}
+
+.ft_nav_1 li.ft_nav_ li{
+    margin: 10px 0;
+    justify-content: space-between;
+}
+
+.ft_nav_1 li a, .ft_nav_2 li a{
+    color: white;
+    font-size: 15px;
+}
+
+.ft_two{
+    display:flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.ft_two h4{
+    color: lightgray;
+}
+
+@media screen and (max-wdith: 765px) {
+    header{
+        padding: 30px 40px
+    }
+
+    .nav_links{
+        position:absolute;
+        top:100px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
